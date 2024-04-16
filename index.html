@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <!--HEAD-->
     <head>
-        <title>Traver Stefan</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width"/>
+        <title>Traver Stefan</title>
         <link rel="stylesheet" type="text/css" href="./CSS/css.css">
     </head>
 
@@ -14,13 +14,11 @@
         <!--NAVBAR-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a href="#GitHub">GitHub/LinkedIn</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
-
-        <br>
-        <br>
 
         <!--BACKGROUND VIDEO-->
         <div id="Home">
@@ -41,6 +39,41 @@
                     <br>Thank you and enjoy!
                 </p>
             </strong>
+        </div>
+
+        <!--SLIDESHOW SECTION-->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/coyote.png" alt="Wile E Coyote">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/codes.png" alt="HTML, CSS, JS Logo">
+                        <div class="text">I'm experienced with HTML, CSS, and Javascript</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/angular.png" alt="Angular Logo">
+                        <div class="text">I'm familiar with Angular</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/vs_code.png" alt="VS Code Logo">
+                        <div class="text">I regularly use VS Code in my projects</div>
+                    </div>
+
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+            </div>
         </div>
 
         <!--ABOUT SECTION-->
@@ -71,7 +104,14 @@
                     You can view my coding projects here:
                     <p class="center"><a href="https://github.com/traverstefan/HTML-and-CSS-Projects/tree/main/Basic_HTML_and_CSS"
                     target="_blank">Traver Stefan's Github</a></p>
+                </p><br>
+                <h1>LinkedIn</h1>
+                <p class="center">
+                    You can view my LinkedIn Profile here:
+                <p class="center"><a href="https://www.linkedin.com/in/901-84aba2262"
+                    target="_blank">Traver Stefan's LinkedIn</a></p>
                 </p>
+                
             </div>
             <div class="Column_2">
                 <a href="https://github.com/traverstefan/HTML-and-CSS-Projects/tree/main/Basic_HTML_and_CSS" target="_blank"><img src="./Images/Fintechtocat.png" alt="GitHub Logo"></a>
@@ -79,29 +119,30 @@
         </div>
 
         <!--CONTACT SECTION-->
-        <div class="Row" id="Contact">
-            <div class="Column_2 Column_tall">
-                <img src="./Images/global.png" alt="Contact Image">
-            </div>
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <form action="https://formspree.io/f/xeqylrjw" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please enter your message here">
-                        <input type="submit" value="SUBMIT">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xeqylrjw" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Please enter your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Please enter your phone number here" name="phone" required>
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Please enter your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Please enter your message here" name="message" required>
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
 
         <!--FOOTER SECTION-->
         <footer>
-            <p>
-                <p class="center">Created by Traver Stefan | March 2024 | <a href="https://github.com/traverstefan/HTML-and-CSS-Projects" target="_blank">Other Projects</a>
-            </p>
+            <p class="center">Created by Traver Stefan | April 2024 | <a href="https://github.com/traverstefan/HTML-and-CSS-Projects" target="_blank">Other Projects</a>
         </footer>
+        <script src="JS/js.js"></script>
     </body>
 </html>
