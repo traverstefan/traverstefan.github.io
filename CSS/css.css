@@ -183,7 +183,7 @@ footer {
 /* END OF VIDEO STYLING */
 
 /* SLIDESHOW STYLING */
-#Slideshow_Background {
+.Slideshow_Background {
     background: rgba(255, 255, 255, 0.35);
 }
 
@@ -191,7 +191,7 @@ footer {
     display: none;
 }
 
-#Slideshow_Container {
+.Slideshow_Container {
     width: 39.5vw;
     height: auto;
     padding-top: 4%;
@@ -243,6 +243,10 @@ footer {
     background-color: rgba(0, 0, 0, 0.75);
     font-weight: bold;
     border-radius: 0px 0px 7px 7px;
+}
+
+.all_dots {
+    text-align: center;
 }
 
 .dot {
